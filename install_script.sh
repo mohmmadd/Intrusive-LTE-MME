@@ -17,6 +17,11 @@ cd pycrate
 sudo python3 setup.py install
 cd ..
 
+git https://github.com/P1sec/CryptoMobile.git
+cd CryptoMobile
+sudo python3 setup.py install
+cd ..
+
 
 #download and install bladeRF drivers and cli
 git clone https://github.com/Nuand/bladeRF.git
