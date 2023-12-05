@@ -207,6 +207,7 @@ class parsing:
                     print("protnas")
                     if any(isinstance(item, pycrate_mobile.NAS.EMMTrackingAreaUpdateRequest) for item in msg): #TAU request
                         print("got TAURequest")
+                        parsing.send_identityRequest(epcServer, enb_ue_id)
                         parsing.send_TAUReject(epcServer, enb_ue_id)
                     if any(isinstance(item, pycrate_mobile.NAS.EMMAttachRequest) for item in msg): #attach Request
                         print("got Attach request")
