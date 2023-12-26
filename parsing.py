@@ -248,7 +248,7 @@ class parsing:
     def create_NAS_only_TAURequest():
         return pycrate_mobile.NAS.EMMTrackingAreaUpdateRequest().to_bytes()
 
-    def create_NAS_only_TAUReject(cause):
+    def create_NAS_only_TAUReject():
         msg = pycrate_mobile.NAS.EMMTrackingAreaUpdateReject()
         # hardcoded Cause #9: UE identity cannot be derived by the network.
         msg[1].set_val([b'\x08'])#8 eps..
